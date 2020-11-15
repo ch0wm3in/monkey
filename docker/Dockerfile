@@ -2,14 +2,14 @@ FROM debian:stretch-slim
 
 LABEL MAINTAINER="theonlydoo <theonlydoo@gmail.com>"
 
-ARG RELEASE=1.8.0
+ARG RELEASE=1.9.1
 ARG DEBIAN_FRONTEND=noninteractive
 
 EXPOSE 5000
 
 WORKDIR /app
 
-ADD https://github.com/guardicore/monkey/releases/download/${RELEASE}/infection_monkey_deb.${RELEASE}.tgz .
+ADD https://github.com/ch0wm3in/monkey/releases/download/${RELEASE}/infection_monkey_deb.${RELEASE}.tgz .
 
 RUN tar xvf infection_monkey_deb.${RELEASE}.tgz  \
     && apt-get -yqq update                       \
