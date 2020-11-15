@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 
 def setup():
     logger.info("Setting up the Monkey Island, this might take a while...")
+    client = MongoClient(mongo_url, serverSelectionTimeoutMS=100)
     try_store_mitigations_on_mongo()
 
 
