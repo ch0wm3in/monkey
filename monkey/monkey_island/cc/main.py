@@ -60,7 +60,7 @@ def start_island_server(should_setup_only):
     crt_path = str(Path(MONKEY_ISLAND_ABS_PATH, 'cc', 'server.crt'))
     key_path = str(Path(MONKEY_ISLAND_ABS_PATH, 'cc', 'server.key'))
 
-    setup()
+    setup(mongo_url)
 
     if should_setup_only:
         logger.warning("Setup only flag passed. Exiting.")
